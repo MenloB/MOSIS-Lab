@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My Places</string>
+
+    <string name="show_map">Show Map</string>
+    <string name="new_place">New place</string>
+    <string name="my_places_list">My Places</string>
+    <string name="about">About</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="OK">OK</string>
+    <string name="about_text">This is the text about application.</string>
+    <string name="edit_name_label">Name:</string>
+    <string name="edit_desc_label">Description:</string>
+    <string name="edit_button_cancel">Cancel</string>
+    <string name="edit_long_label">Longitude:</string>
+    <string name="edit_lat_label">Latitude:</string>
+    <string name="edit_location_label">Get location</string>
+    <string name="title_activity_my_places_maps">Map</string>
+</resources>
