@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -83,11 +84,12 @@ public class EditMyPlaceActivity extends AppCompatActivity implements View.OnCli
             if(resultCode == Activity.RESULT_OK)
             {
                 String lon = data.getExtras().getString("lon");
+                Log.e("LONGITUDE:", lon);
                 EditText lonText = findViewById(R.id.long_edit);
                 lonText.setText(lon);
                 String lat = data.getExtras().getString("lat");
                 EditText latText = findViewById(R.id.lat_edit);
-                lonText.setText(lat);
+                latText.setText(lat);
             }
         } catch (Exception e)
         {
@@ -133,6 +135,7 @@ public class EditMyPlaceActivity extends AppCompatActivity implements View.OnCli
 
             case R.id.location_button_edit:
                 Intent i = new Intent(this, MyPlacesMapsActivity.class);
+                i.putExtra("state", MyPlacesMapsActivity.SELECT_COORDINATES);
                 startActivityForResult(i, 1);
                 break;
         }
